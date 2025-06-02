@@ -1,0 +1,56 @@
+{
+  "name": "Roblox Studio AI助教",
+  "version": "1.0.0",
+  "description": "專為Roblox Studio課程設計的AI助教系統",
+  "author": "您的名稱",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/roblox-ai-assistant.git"
+  },
+  "homepage": "https://yourusername.github.io/roblox-ai-assistant/",
+  "keywords": [
+    "roblox",
+    "ai-assistant",
+    "education",
+    "programming",
+    "game-development",
+    "luau",
+    "chinese"
+  ],
+  "features": [
+    "AI問答系統",
+    "課程章節導航",
+    "響應式設計",
+    "中文支援",
+    "統計追蹤",
+    "API整合"
+  ],
+  "requirements": {
+    "grok-api": "需要有效的Grok API Key",
+    "google-sheets": "需要公開的Google Sheets CSV連結",
+    "browser": "現代瀏覽器（Chrome, Firefox, Safari, Edge）"
+  },
+  "configuration": {
+    "api": {
+      "provider": "X.AI Grok",
+      "model": "grok-beta",
+      "temperature": 0.7
+    },
+    "data": {
+      "source": "Google Sheets",
+      "format": "CSV",
+      "encoding": "UTF-8"
+    },
+    "ui": {
+      "theme": "dark",
+      "language": "zh-TW",
+      "responsive": true
+    }
+  },
+  "deployment": {
+    "platform": "GitHub Pages",
+    "build": "Static HTML/CSS/JS",
+    "cdn": "cdnjs.cloudflare.com"
+  }
+}
