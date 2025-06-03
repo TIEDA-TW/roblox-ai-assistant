@@ -4,7 +4,7 @@ class RobloxAIAssistant {
         this.courseData = [];
         this.chatHistory = [];
         this.settings = {
-            googleSheetUrl: '',
+            googleSheetUrl: 'https://docs.google.com/spreadsheets/d/1iLXLskYiOdDmnTC_2jbz8ypK6Sj6qzJOkGGUayQcpZ4/export?format=csv&gid=0',
             apiEndpoint: '/api/chat' // 使用後端API端點
         };
         
@@ -17,10 +17,7 @@ class RobloxAIAssistant {
         this.updateStats();
         await this.loadCourseData();
         
-        // 如果沒有設定Google Sheets，顯示設定面板
-        if (!this.settings.googleSheetUrl) {
-            this.openSettings();
-        }
+        // 不再自動打開設定面板，因為已經內建連結
     }
 
     setupEventListeners() {
@@ -47,7 +44,9 @@ class RobloxAIAssistant {
     loadSettings() {
         const saved = localStorage.getItem('robloxAI_settings');
         if (saved) {
-            this.settings = { ...this.settings, ...JSON.parse(saved) };
+            const savedSettings = JSON.parse(saved);
+            // 保持預設的Google Sheets URL，但允許覆蓋其他設定
+            this.settings = { ...this.settings, ...savedSettings };
         }
     }
 
@@ -81,6 +80,7 @@ class RobloxAIAssistant {
     }
 
     async loadCourseData() {
+        // 即使沒有設定，也會使用預設的Google Sheets URL
         if (!this.settings.googleSheetUrl) {
             console.warn('Google Sheet URL not configured');
             this.courseData = this.getDefaultCourseData();
