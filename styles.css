@@ -108,6 +108,8 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 100%;
 }
 
 .chat-messages {
@@ -118,6 +120,8 @@ body {
     flex-direction: column;
     gap: 20px;
     scroll-behavior: smooth;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .chat-messages::-webkit-scrollbar {
@@ -143,6 +147,8 @@ body {
     display: flex;
     margin-bottom: 20px;
     animation: fadeInUp 0.5s ease-out;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .message-content {
@@ -188,6 +194,10 @@ body {
     border: 1px solid var(--border-color);
     position: relative;
     flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .user-message .text {
@@ -603,7 +613,7 @@ body {
     }
     
     .message-content {
-        max-width: 90%;
+        max-width: 88%;
         gap: 6px;
     }
     
@@ -618,6 +628,9 @@ body {
         font-size: 0.95rem;
         line-height: 1.5;
         border-radius: 12px;
+        word-break: break-word;
+        hyphens: auto;
+        max-width: calc(100vw - 80px);
     }
     
     .text h3 {
@@ -771,7 +784,7 @@ body {
     }
     
     .message-content {
-        max-width: 92%;
+        max-width: 85%;
         gap: 4px;
     }
     
@@ -782,9 +795,13 @@ body {
     }
     
     .text {
-        padding: 12px;
+        padding: 8px 10px;
         font-size: 0.9rem;
-        border-radius: 12px;
+        border-radius: 10px;
+        word-break: break-word;
+        hyphens: auto;
+        max-width: calc(100vw - 70px);
+        line-height: 1.4;
     }
     
     .text h3 {
