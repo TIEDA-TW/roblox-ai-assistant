@@ -42,8 +42,8 @@ body {
 .header {
     background: linear-gradient(135deg, var(--primary-color), var(--roblox-blue));
     border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 30px;
+    padding: 25px;
+    margin-bottom: 25px;
     box-shadow: 0 10px 30px rgba(0, 162, 255, 0.3);
     position: relative;
     overflow: hidden;
@@ -71,7 +71,6 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 10px;
 }
 
 .logo i {
@@ -88,11 +87,7 @@ body {
     text-align: center;
 }
 
-.subtitle p {
-    font-size: 1.1rem;
-    opacity: 0.9;
-    font-weight: 300;
-}
+
 
 /* Main Content Layout */
 .main-content {
@@ -153,8 +148,8 @@ body {
 .message-content {
     display: flex;
     align-items: flex-start;
-    gap: 15px;
-    max-width: 80%;
+    gap: 8px;
+    max-width: 85%;
 }
 
 .user-message {
@@ -166,13 +161,13 @@ body {
 }
 
 .avatar {
-    width: 45px;
-    height: 45px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     flex-shrink: 0;
 }
 
@@ -188,10 +183,11 @@ body {
 
 .text {
     background: var(--background-color);
-    padding: 20px;
-    border-radius: 18px;
+    padding: 12px 15px;
+    border-radius: 15px;
     border: 1px solid var(--border-color);
     position: relative;
+    flex: 1;
 }
 
 .user-message .text {
@@ -567,50 +563,167 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {
-        padding: 15px;
+        padding: 10px;
     }
     
     .main-content {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 15px;
     }
     
     .header {
-        padding: 20px;
-        margin-bottom: 20px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .logo {
+        gap: 10px;
     }
     
     .logo h1 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        text-align: center;
     }
     
     .logo i {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     
+
+    
     .chat-container {
-        height: 60vh;
+        height: 75vh;
+        border-radius: 15px;
     }
     
     .chat-messages {
-        padding: 20px;
+        padding: 15px;
+        gap: 15px;
     }
     
     .message-content {
         max-width: 90%;
+        gap: 6px;
+    }
+    
+    .avatar {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+    }
+    
+    .text {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        border-radius: 12px;
+    }
+    
+    .text h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .quick-questions {
+        margin-top: 15px;
+        padding-top: 10px;
+    }
+    
+    .quick-questions p {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .quick-btn {
+        display: block;
+        width: 100%;
+        margin: 0 0 8px 0;
+        padding: 12px 15px;
+        text-align: center;
+        font-size: 0.9rem;
+        border-radius: 12px;
     }
     
     .input-container {
-        padding: 15px 20px;
+        padding: 15px;
+    }
+    
+    .input-wrapper {
+        gap: 10px;
+    }
+    
+    #questionInput {
+        font-size: 1rem;
+        padding: 12px 15px;
+    }
+    
+    #sendButton {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .input-info small {
+        font-size: 0.8rem;
+    }
+    
+    /* 側邊欄在手機版變成底部面板 */
+    .sidebar {
+        order: 2;
     }
     
     .course-info, .stats {
-        padding: 20px;
+        padding: 15px;
+        border-radius: 12px;
+    }
+    
+    .course-info h3, .stats h3 {
+        font-size: 1rem;
+        margin-bottom: 12px;
+    }
+    
+    .chapter-list li {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+    
+    .stat-item {
+        padding: 8px 0;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
+    }
+    
+    .stat-value {
+        font-size: 1rem;
     }
     
     .settings-content {
-        padding: 30px;
-        margin: 20px;
+        padding: 25px 20px;
+        margin: 15px;
+        border-radius: 15px;
+    }
+    
+    .settings-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    .form-group input {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 12px 20px;
+        font-size: 0.95rem;
     }
     
     .settings-btn {
@@ -623,31 +736,113 @@ body {
 }
 
 @media (max-width: 480px) {
+    .container {
+        padding: 8px;
+    }
+    
+    .header {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+    
     .logo {
-        flex-direction: column;
-        gap: 10px;
+        gap: 6px;
     }
     
     .logo h1 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+        line-height: 1.1;
     }
     
-    .subtitle p {
-        font-size: 1rem;
+    .logo i {
+        font-size: 1.8rem;
+    }
+    
+
+    
+    .chat-container {
+        height: 78vh;
+        border-radius: 12px;
+    }
+    
+    .chat-messages {
+        padding: 12px;
+        gap: 12px;
+    }
+    
+    .message-content {
+        max-width: 92%;
+        gap: 4px;
+    }
+    
+    .avatar {
+        width: 24px;
+        height: 24px;
+        font-size: 0.7rem;
+    }
+    
+    .text {
+        padding: 12px;
+        font-size: 0.9rem;
+        border-radius: 12px;
+    }
+    
+    .text h3 {
+        font-size: 0.95rem;
     }
     
     .quick-btn {
-        display: block;
-        margin-bottom: 8px;
-        text-align: center;
+        padding: 10px 12px;
+        font-size: 0.85rem;
+        border-radius: 10px;
+    }
+    
+    .input-container {
+        padding: 12px;
     }
     
     .input-wrapper {
-        gap: 10px;
+        gap: 8px;
+    }
+    
+    #questionInput {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+        border-radius: 20px;
     }
     
     #sendButton {
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    
+    .course-info, .stats {
+        padding: 12px;
+    }
+    
+    .course-info h3, .stats h3 {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+    
+    .chapter-list li {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+        border-radius: 8px;
+    }
+    
+    .settings-content {
+        padding: 20px 15px;
+        margin: 10px;
+    }
+    
+    .settings-btn {
         width: 45px;
         height: 45px;
+        bottom: 15px;
+        right: 15px;
+        font-size: 1.1rem;
     }
 }
