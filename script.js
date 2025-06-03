@@ -141,7 +141,7 @@ class RobloxAIAssistant {
                 chapter: "Roblox Studio安裝與操作"
             },
             {
-                keyword: "Luau",
+                keyword: "Lua",
                 summary: "Roblox使用的程式語言，衍生自Lua 5.1，具有漸進式型別系統和效能優化",
                 page: "P.34-35",
                 chapter: "Roblox遊戲設計程式語言"
